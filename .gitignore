@@ -1,0 +1,12 @@
+node_modules
+.DS_Store*
+.hubot_history
+.npm
+.idea
+.bash_history
+test
+pids/
+logs/
+forever
+.forever
+.node_repl_history

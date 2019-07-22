@@ -1,0 +1,11 @@
+version: '2'
+services:
+  hubot:
+    build: ./
+    environment:
+      HUBOT_SLACK_TOKEN: dummy-slack-token
+    volumes:
+      - ./:/home/hubot/
+    tty: true
+    stdin_open: true
+    command: bin/dev-hubot --adapter slack

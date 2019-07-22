@@ -1,0 +1,17 @@
+#!/bin/sh
+
+set -e
+
+#npm install
+export PATH="node_modules/.bin:node_modules/hubot/node_modules/.bin:$PATH"
+
+case $1 in
+    "start" | "stop" | "restart" )
+       ./node_modules/forever/bin/forever $1 \
+           -p /home/hubot/pids \
+           --pidFile /home/hubot/pids/hubot.pid \
+           -l /home/hubot/logs/hubot.log -a \
+           -c coffee node_modules/hubot/bin/hubot --adapter slack
+    ;;
+    * ) echo "usage: hubot start|stop|restart" ;;
+esac
