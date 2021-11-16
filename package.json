@@ -5,7 +5,7 @@
   "author": "nyanpucchi",
   "description": "Hubot image",
   "dependencies": {
-    "aws-sdk": "^2.494.0",
+    "aws-sdk": "^2.814.0",
     "forever": "^1.0.0",
     "hubot": "^3.3.2",
     "hubot-diagnostics": "^1.0.0",
